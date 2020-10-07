@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Таблица</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+  <table border="1">
+    <tr>
+        <th>Год выпуска
+        <th>Название
+        <th>Пробег
+        <th>Объём двигателя
+        <th>Количество владельцев
+        <th>Номер
+        <th>Цвет
+        <th>Цена
+    </tr>
+    <tr th:each="car : ${carList}">
+        <td th:text="${car.year}">
+        <td th:text="${car.name}">
+        <td th:text="${car.mileage}">
+        <td th:text="${car.engineCapacity}">
+        <td th:text="${car.ownersCount}">
+        <td th:text="${car.number}">
+        <td th:text="${car.color}">
+        <td th:text="${car.price}">
+    </tr>
+  </table>
+</body>
+</html>
